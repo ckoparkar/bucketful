@@ -1,4 +1,4 @@
-# bucketful
+# bucketful [![Build Status](https://travis-ci.org/cskksc/bucketful.svg)](https://travis-ci.org/cskksc/bucketful)
 
 A simple ruby client to zip folders and upload them to S3.
 
