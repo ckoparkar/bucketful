@@ -35,3 +35,12 @@ task :zip_and_upload, :dir do |_t, args|
   Rake::Task["zip_dirs"].invoke(args[:dir])
   Rake::Task["upload_all_zip"].invoke(args[:dir])
 end
+
+desc 'Verify if all zip files are uploaded'
+task :verify_uploads, :dir do |_t, args|
+  check_env_vars
+  bucket = Bucketful::S3Bucket.new(aws_key: ENV['AWS_KEY'],
+                                   aws_secret: ENV['AWS_SECRET'],
+                                   s3_bucket: ENV['S3_BUCKET'])
+  bucket.verify_uploads(args[:dir])
+end

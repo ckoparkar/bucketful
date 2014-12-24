@@ -24,7 +24,26 @@ module Bucketful
       end
     end
 
+    # Verifies if all zip files are uploaded
+    # @return [Boolean]
+    def verify_uploads(directory)
+      zips = Dir.glob("#{directory}/*").select {|file| file =~ /.zip/}
+      zips.each do |zip|
+        unless file_exists?(zip)
+          puts "#{zip} is not uploaded to #{@s3_bucket.name}."
+          puts "Try: bundle exec rake upload_all_zip['#{directory}']"
+          exit 1
+        end
+      end
+      puts "All zip files are uploaded."
+      true
+    end
+
     private
+
+    def file_exists?(file_name)
+      @s3_bucket.objects[file_name].exists?
+    end
 
     def sub_dirs(dir)
       Dir.glob("#{dir}/*").select {|file| File.directory? file}
