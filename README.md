@@ -1,6 +1,4 @@
-# bucketful [![Build Status](https://travis-ci.org/cskksc/bucketful.svg)](https://travis-ci.org/cskksc/bucketful)
-[![Code Climate](https://codeclimate.com/github/cskksc/bucketful/badges/gpa.svg)](https://codeclimate.com/github/cskksc/bucketful)
-[![Test Coverage](https://codeclimate.com/github/cskksc/bucketful/badges/coverage.svg)](https://codeclimate.com/github/cskksc/bucketful)
+# bucketful [![Build Status](https://travis-ci.org/cskksc/bucketful.svg)](https://travis-ci.org/cskksc/bucketful) [![Code Climate](https://codeclimate.com/github/cskksc/bucketful/badges/gpa.svg)](https://codeclimate.com/github/cskksc/bucketful) [![Test Coverage](https://codeclimate.com/github/cskksc/bucketful/badges/coverage.svg)](https://codeclimate.com/github/cskksc/bucketful)
 
 A simple ruby client to zip folders and upload them to S3.
 
