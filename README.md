@@ -2,13 +2,19 @@
 
 A simple ruby client to zip folders and upload them to S3.
 
-## Usage
+## Usage:
 
 * `bundle exec rake zip_dirs['directory']`: zips all sub-dirs of *directory*
 * `bundle exec rake upload_all_zip['directory']`: uploads all zip file from *directory*
 * `bundle exec rake zip_and_upload['directory']`: zips and uploads all sub-dirs of *directory*
 * `bundle exec rake verify_uploads['directory']`: checks if all zip files from *directory* are uploaded to S3
 
+### To use for multiple directories:
+
+* `bundle exec rake zip_dirs['directory1 directory2']`: zips all sub-dirs of *directories*
+* `bundle exec rake upload_all_zip['directory1 directory2']`: uploads all zip file from *directories*
+* `bundle exec rake zip_and_upload['directory1 directory2']`: zips and uploads all sub-dirs of *directories*
+* `bundle exec rake verify_uploads['directory1 directory2']`: checks if all zip files from *directories* are uploaded to S3
 
 For users on zsh, run:
 noglob bundle exec rake ...
