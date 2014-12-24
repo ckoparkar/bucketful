@@ -21,6 +21,7 @@ module Bucketful
     def zip_dirs(directory)
       sub_dirs(directory).each do |dir|
         Archive::Zip.archive("#{dir}.zip", dir)
+        puts "Created #{dir}.zip"
       end
     end
 
@@ -35,7 +36,7 @@ module Bucketful
           exit 1
         end
       end
-      puts "All zip files are uploaded."
+      puts "All zip files from #{directory} are uploaded."
       true
     end
 
