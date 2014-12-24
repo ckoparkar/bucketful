@@ -5,4 +5,5 @@ gem "aws-sdk"
 gem "rake"
 gem "archive-zip"
 gem "cucumber"
-gem 'pry'
+gem "pry"
+gem "rspec"

@@ -1,8 +1,10 @@
 require_relative 'lib/bucketful.rb'
 require 'cucumber/rake/task'
+require 'rspec/core/rake_task'
 
 Cucumber::Rake::Task.new
-task default: [:cucumber]
+RSpec::Core::RakeTask.new
+task default: [:spec, :cucumber]
 
 def check_env_vars
   if ENV['AWS_KEY'].nil? || ENV['AWS_SECRET'].nil? || ENV['S3_BUCKET'].nil? then
