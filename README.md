@@ -2,12 +2,14 @@
 
 A simple ruby client to zip folders and upload them to S3.
 
-## Usage:
+## Dependencies:
 
 Takes AWS S3 credentials from environment vars:
 * `AWS_KEY` - aws key
 * `AWS_SECRET` - aws secret
 * `S3_BUCKET` - bucket name
+
+## Usage:
 
 * `bundle exec rake zip_dirs['directory']`: zips all sub-dirs of *directory*
 * `bundle exec rake upload_all_zip['directory']`: uploads all zip file from *directory*
