@@ -29,3 +29,9 @@ task :upload_all_zip, :dir do |_t, args|
                                    s3_bucket: ENV['S3_BUCKET'])
   bucket.upload_all_zip(args[:dir])
 end
+
+desc 'Zip dirs and then upload them'
+task :zip_and_upload, :dir do |_t, args|
+  Rake::Task["zip_dirs"].invoke(args[:dir])
+  Rake::Task["upload_all_zip"].invoke(args[:dir])
+end
